@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Auszeichnung In Tei | Dokumentation &amp; Workflow Digitale Edition OIB</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="Auszeichnung In Tei" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="title: “Dokumentation: Auszeichnungen für TEI Editionen arabischer Manuskripte” author: Julia Dolhoff &amp; Till Grallert date: 2017-11-06 10:22:16 +0200 —" />
+<meta property="og:description" content="title: “Dokumentation: Auszeichnungen für TEI Editionen arabischer Manuskripte” author: Julia Dolhoff &amp; Till Grallert date: 2017-11-06 10:22:16 +0200 —" />
+<link rel="canonical" href="http://localhost:4000/2017/11/06/Auszeichnung-in-TEI.html" />
+<meta property="og:url" content="http://localhost:4000/2017/11/06/Auszeichnung-in-TEI.html" />
+<meta property="og:site_name" content="Dokumentation &amp; Workflow Digitale Edition OIB" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-11-06T00:00:00+02:00" />
+<script type="application/ld+json">
+{"description":"title: “Dokumentation: Auszeichnungen für TEI Editionen arabischer Manuskripte” author: Julia Dolhoff &amp; Till Grallert date: 2017-11-06 10:22:16 +0200 —","@type":"BlogPosting","url":"http://localhost:4000/2017/11/06/Auszeichnung-in-TEI.html","headline":"Auszeichnung In Tei","dateModified":"2017-11-06T00:00:00+02:00","datePublished":"2017-11-06T00:00:00+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2017/11/06/Auszeichnung-in-TEI.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Dokumentation & Workflow Digitale Edition OIB</h1>
+        <p>Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="" class="button fork"><strong>View On GitHub</strong></a>
+        
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <hr />
+<p>title: “Dokumentation: Auszeichnungen für TEI Editionen arabischer Manuskripte”
+author: Julia Dolhoff &amp; Till Grallert
+date: 2017-11-06 10:22:16 +0200
+—</p>
+
+<p><a href="./">Zurück zur Startseite</a></p>
+
+<h1 id="besprechung-benötigter-auszeichnungen-für-die-digitale-edition-der-bi--bts-26102017">Besprechung benötigter Auszeichnungen für die digitale Edition der BI / BTS (26.10.2017)</h1>
+
+<h2 id="generelle-anmerkungen">Generelle Anmerkungen:</h2>
+
+<ul>
+  <li>Word Datei liegt ohne Auszeichnungen vor</li>
+  <li>Text später alles auf Arabisch (auch Fußnoten), nur Einleitung auf Englisch</li>
+</ul>
+
+<h2 id="1-strukturelemente-block-level-zb-text-paragraph-gedicht">1. Strukturelemente: block-level (z.B. Text, Paragraph, Gedicht)</h2>
+
+<ul>
+  <li>
+    <p><strong>Einheiten im Text</strong> (einzelne Einträge) / <strong>Geschichten</strong></p>
+
+    <p>Beispiel:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ~~~{.xml}
+  &lt;text&gt;
+  &lt;!-- Section on Alexander Pope starts --&gt;
+      &lt;front&gt;
+      &lt;!-- biographical notice by editor --&gt;
+      &lt;/front&gt;
+      &lt;group&gt;
+          &lt;text&gt;
+          &lt;!-- first poem --&gt;
+          &lt;/text&gt;
+          &lt;text&gt;
+          &lt;!-- second poem --&gt;
+          &lt;/text&gt;
+      &lt;/group&gt;
+  &lt;/text&gt;
+  ~~~
+</code></pre></div>    </div>
+
+    <ul>
+      <li>Siehe: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Gedichte</strong></p>
+
+    <p>Beispiel:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ~~~{.xml}
+  &lt;text&gt;
+      &lt;body&gt;
+          &lt;head&gt;My Alba&lt;/head&gt;
+          &lt;lg&gt;
+              &lt;l&gt;Now that I've wasted&lt;/l&gt;
+              &lt;l&gt;five years in Manhattan&lt;/l&gt;
+              &lt;l&gt;life decaying&lt;/l&gt;
+              &lt;l&gt;talent a blank&lt;/l&gt;
+          &lt;/lg&gt;
+          &lt;lg&gt;
+              &lt;l&gt;talking disconnected&lt;/l&gt;
+              &lt;l&gt;patient and mental&lt;/l&gt;
+              &lt;l&gt;sliderule and number&lt;/l&gt;
+              &lt;l&gt;machine on a desk&lt;/l&gt;
+          &lt;/lg&gt;
+      &lt;/body&gt;
+  &lt;/text&gt;
+  ~~~		
+</code></pre></div>    </div>
+
+    <ul>
+      <li>In arabischen Gedichten kommen oft Halbzeilen vor: <code class="highlighter-rouge">&lt;seg&gt;</code></li>
+    </ul>
+
+    <p>Beispiel:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ~~~{.xml}
+  &lt;text&gt;
+      &lt;body&gt;
+          &lt;l type = "bayt"&gt;
+              &lt;seg&gt;Now that I've wasted&lt;/seg&gt;
+              &lt;seg&gt;five years in Manhattan&lt;/seg&gt;
+              &lt;seg&gt;life decaying&lt;/seg&gt;
+              &lt;seg&gt;talent a blank&lt;/seg&gt;
+          &lt;/l&gt;
+          &lt;l&gt;
+              &lt;seg&gt;talking disconnected&lt;/seg&gt;
+              &lt;seg&gt;patient and mental&lt;/seg&gt;
+              &lt;seg&gt;sliderule and number&lt;/seg&gt;
+              &lt;seg&gt;machine on a desk&lt;/seg&gt;
+          &lt;/l&gt;
+      &lt;/body&gt;
+  &lt;/text&gt;
+  ~~~	
+</code></pre></div>    </div>
+
+    <ul>
+      <li>Siehe: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html</a></li>
+    </ul>
+  </li>
+  <li><strong>Tabellen</strong>
+    <ul>
+      <li><code class="highlighter-rouge">&lt;table&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;row&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;cell&gt;</code></li>
+    </ul>
+
+    <p>Beispiel:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ~~~{.xml}
+  &lt;table&gt;
+      &lt;head&gt;US State populations, 1990&lt;/head&gt;
+      &lt;row role="label"&gt;
+          &lt;cell&gt;state&lt;/cell&gt;
+          &lt;cell&gt;population&lt;/cell&gt;
+      &lt;/row&gt;
+      &lt;row role="data"&gt;
+          &lt;cell&gt;Wyoming&lt;/cell&gt;
+          &lt;cell&gt;453,588&lt;/cell&gt;
+      &lt;/row&gt;
+      &lt;row role="data"&gt;
+          &lt;cell&gt;&lt;placeName&gt;Alaska&lt;/placeName&gt;&lt;/cell&gt;
+          &lt;cell&gt;&lt;num value="550043"&gt;550,043&lt;/num&gt;&lt;/cell&gt;
+      &lt;/row&gt;
+  &lt;/table&gt;
+  ~~~
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Einschübe</strong>: <code class="highlighter-rouge">&lt;floatingText&gt;</code></li>
+  <li>
+    <p><strong>Listen</strong></p>
+
+    <p>Beispiel:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ~~~{.xml}
+  &lt;list type="ordered"&gt;
+      &lt;item&gt;a butcher&lt;/item&gt;
+      &lt;item&gt;a baker&lt;/item&gt;
+      &lt;item&gt;a candlestick maker, with
+          &lt;list type="bullets"&gt;
+              &lt;item&gt;rings on his fingers&lt;/item&gt;
+              &lt;item&gt;bells on his toes&lt;/item&gt;
+          &lt;/list&gt;
+      &lt;/item&gt;
+  &lt;/list&gt;
+  ~~~
+</code></pre></div>    </div>
+
+    <ul>
+      <li>Siehe: <a href="http://web.uvic.ca/lancenrd/martin/guidelines/ref-list.html">http://web.uvic.ca/lancenrd/martin/guidelines/ref-list.html</a></li>
+    </ul>
+  </li>
+  <li><strong>Rechnungen</strong> (mit Ergebnis)
+    <ul>
+      <li>Zahlen: <code class="highlighter-rouge">&lt;num&gt;</code> können mit <code class="highlighter-rouge">@value</code> normalisiert werden.</li>
+      <li>Maße: <code class="highlighter-rouge">&lt;measure&gt;</code> und <code class="highlighter-rouge">&lt;measureGrp&gt;</code>
+        <ul>
+          <li><code class="highlighter-rouge">&lt;measure commodity="" unit="" quantity=""/&gt;</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="2-strukturelemente-block-level-oder-inline-zb-zitate-auslassungen">2. Strukturelemente: block level oder inline (z.B. Zitate, Auslassungen)</h2>
+
+<ul>
+  <li>
+    <p><strong>Zitate</strong></p>
+
+    <ul>
+      <li>Lexicography has shown little sign of being affected by the
+ work of followers of J.R. Firth, probably best summarized in his
+ slogan, <code class="highlighter-rouge">&lt;quote&gt;</code>You shall know a word by the company it
+ keeps<code class="highlighter-rouge">&lt;/quote&gt;</code></li>
+    </ul>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  `&lt;ref&gt;`(Firth, 1957)`&lt;/ref&gt;`
+</code></pre></div>    </div>
+
+    <ul>
+      <li>Siehe: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-quote.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-quote.html</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Koranverse</strong></p>
+  </li>
+</ul>
+
+<p>Könnten wir als Verse betrachten.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Beispiel:
+
+	~~~{.xml}
+	&lt;text&gt;
+		&lt;front&gt;
+			&lt;head&gt;1755&lt;/head&gt;
+		&lt;/front&gt;
+		&lt;body&gt;
+			&lt;l&gt;To make a prairie it takes a clover and one bee,&lt;/l&gt;
+			&lt;l&gt;One clover, and a bee,&lt;/l&gt;
+			&lt;l&gt;And revery.&lt;/l&gt;
+			&lt;l&gt;The revery alone will do,&lt;/l&gt;
+			&lt;l&gt;If bees are few.&lt;/l&gt;
+		&lt;/body&gt;
+	&lt;/text&gt;
+	~~~
+
++ Siehe: &lt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Chronogram</strong>
+    <ul>
+      <li>Wir schlagen <code class="highlighter-rouge">&lt;date&gt;</code> vor. Datum kann dann mit <code class="highlighter-rouge">@when</code> und <code class="highlighter-rouge">@when-custom</code> normalisiert werden.</li>
+    </ul>
+  </li>
+  <li><strong>Hadith</strong>
+    <ul>
+      <li>Bestandteile sind Überlieferungskette und Text.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="2-graphische-markierungen-inline-überstriche-farbliche-hervorhebungen-anführungszeichen">2. Graphische Markierungen: inline (Überstriche, farbliche Hervorhebungen, Anführungszeichen)</h2>
+
+<ul>
+  <li>
+    <p><strong>Überschriften</strong></p>
+
+    <ul>
+      <li>Das <code class="highlighter-rouge">&lt;head&gt;</code> Element wird für jede Art Überschrift verwendet</li>
+      <li><code class="highlighter-rouge">&lt;head place="margin"&gt;</code>Secunda conclusio<code class="highlighter-rouge">&lt;/head&gt;</code></li>
+      <li>Siehe: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-head.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-head.html</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Überstriche</strong></p>
+  </li>
+</ul>
+
+<ol>
+  <li><code class="highlighter-rouge">&lt;hi rendition="#apples"/&gt;</code>, wie “apples” dann aussehen soll, wird woanders festgelegt; z.B. formalisiert im teiHeader mit <code class="highlighter-rouge">&lt;rendition&gt;</code> (<a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-rendition.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-rendition.html</a>).</li>
+  <li><code class="highlighter-rouge">&lt;hi rend="center"/&gt;</code>, dann liegt keine maschinenlesbare Formalisierung vor.</li>
+</ol>
+
+<ul>
+  <li>
+    <p><strong>Seitenzahlen und Umbrüche</strong> (Seitenzahlen sind in [ ])
+  Beispiel:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ~~~{.xml}
+      &lt;body&gt;
+      &lt;pb n="1" facs="page1.png"/&gt;
+      &lt;!-- page1.png contains an image of the page;
+      	the text it contains is encoded here --&gt;
+      &lt;p&gt;
+      &lt;!-- ... --&gt;
+      &lt;/p&gt;
+      &lt;pb n="2" facs="page2.png"/&gt;
+      &lt;!-- similarly, for page 2 --&gt;
+      &lt;p&gt;
+      &lt;!-- ... --&gt;
+      &lt;/p&gt;
+  &lt;/body&gt;
+  ~~~
+</code></pre></div>    </div>
+
+    <ul>
+      <li>Siehe: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html</a></li>
+    </ul>
+  </li>
+  <li><strong>Gliedernde Querstriche</strong>
+    <ul>
+      <li>Da Querstriche ein graphisches Element sind, könnten sie als <code class="highlighter-rouge">&lt;graphic&gt;</code> getaggt werden.</li>
+    </ul>
+  </li>
+  <li><strong>Highlight</strong> (z.B. bei Überschriften oder farbig)
+    <ul>
+      <li><code class="highlighter-rouge">&lt;hi rend="gothic"&gt;</code>And this Indenture further witnesseth<code class="highlighter-rouge">&lt;/hi&gt;</code>
+that the said <code class="highlighter-rouge">&lt;hi rend="italic"&gt;</code>Walter Shandy<code class="highlighter-rouge">&lt;/hi&gt;</code>, merchant,
+in consideration of the said intended marriage …</li>
+      <li>
+        <p>indered a man’s proceedings who <code class="highlighter-rouge">&lt;hi rend="underline"&gt;</code>had obtained all the letters to Mr Boyd<code class="highlighter-rouge">&lt;/hi&gt;</code></p>
+      </li>
+      <li>
+        <p>Beispiel @rendition:</p>
+
+        <pre><code class="language-{.xml}">      &lt;head rendition="#ac #sc"&gt;
+          &lt;lb/&gt;To The &lt;lb/&gt;Duchesse &lt;lb/&gt;of &lt;lb/&gt;Newcastle, &lt;lb/&gt;On Her&lt;lb/&gt;
+          &lt;hi rendition="#normal"&gt;New Blazing-World&lt;/hi&gt;.
+      &lt;/head&gt;
+      &lt;!-- elsewhere... --&gt;
+      &lt;rendition xml:id="sc" scheme="css"&gt;font-variant: small-caps&lt;/rendition&gt;
+      &lt;rendition xml:id="normal" scheme="css"&gt;font-variant: normal&lt;/rendition&gt;
+      &lt;rendition xml:id="ac" scheme="css"&gt;text-align: center&lt;/rendition&gt;
+      &lt;rendition xml:id="red"&gt;color: red;&lt;/rendition&gt;
+</code></pre>
+      </li>
+      <li>Siehe: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-hi.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-hi.html</a></li>
+      <li>Siehe: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.global.rendition.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.global.rendition.html</a></li>
+      <li>Siehe: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Fußnoten</strong></p>
+
+    <p>Beispiel:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ~~~{.xml}
+  &lt;l&gt;(Diff'rent our parties, but with equal grace&lt;/l&gt;
+  &lt;l&gt;The Goddess smiles on Whig and Tory race,&lt;/l&gt;
+  &lt;l&gt;
+      &lt;note type="imitation" place="bottom" anchored="false"&gt;
+          &lt;bibl&gt;Virg. Æn. 10.&lt;/bibl&gt;
+          &lt;quote&gt;
+              &lt;l&gt;Tros Rutulusve fuat; nullo discrimine habebo.&lt;/l&gt;
+              &lt;l&gt;—— Rex Jupiter omnibus idem.&lt;/l&gt;
+          &lt;/quote&gt;
+      &lt;/note&gt;'Tis the same rope at sev'ral ends they twist,
+  &lt;/l&gt;
+  ~~~
+</code></pre></div>    </div>
+
+    <ul>
+      <li>Siehe: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="3-editorische-eingriffe">3. Editorische Eingriffe</h2>
+
+<ul>
+  <li><strong>Seiten fehlen</strong>: <code class="highlighter-rouge">&lt;gap resp=""/&gt;</code></li>
+  <li><strong>Verbesserungen und Streichungen</strong> (meist: &lt;verbessert in&gt; [ursprünglich])
+    <ul>
+      <li>Streichungen</li>
+    </ul>
+
+    <p>Beispiel:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ~~~{.xml}
+  &lt;l&gt;
+      &lt;del rend="overtyped"&gt;Mein&lt;/del&gt; Frisch
+      &lt;del rend="overstrike" type="primary"&gt;schwebt&lt;/del&gt; weht der Wind
+  &lt;/l&gt;
+  ~~~
+</code></pre></div>    </div>
+
+    <ul>
+      <li>Siehe: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html</a></li>
+      <li>Hinzufügungen: <code class="highlighter-rouge">&lt;add&gt;</code></li>
+    </ul>
+
+    <p>Beispiel:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ~~~{.xml}
+  &lt;l&gt;
+      &lt;del rend="overtyped"&gt;Mein&lt;/del&gt; &lt;add&gt;Frisch&lt;/add&gt;
+      &lt;del rend="overstrike" type="primary"&gt;schwebt&lt;/del&gt; &lt;add&gt;weht&lt;/add&gt; der Wind
+  &lt;/l&gt;
+  ~~~
+</code></pre></div>    </div>
+
+    <ul>
+      <li>Beides zusammen lässt sich noch in ein <code class="highlighter-rouge">&lt;choice&gt;</code> element verpacken.</li>
+    </ul>
+
+    <p>Beispiel:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ~~~{.xml}
+  &lt;l&gt;
+      &lt;del rend="overtyped"&gt;Mein&lt;/del&gt; &lt;add&gt;Frisch&lt;/add&gt;
+      &lt;choice&gt;&lt;del rend="overstrike" type="primary"&gt;schwebt&lt;/del&gt; &lt;add&gt;weht&lt;/add&gt;&lt;/choice&gt; der Wind
+  &lt;/l&gt;
+  ~~~
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="4-named-entities-daten-namen-personen-orte">4. Named entities: Daten, Namen, Personen, Orte</h2>
+
+<ul>
+  <li><strong>Datum</strong> als Datum markieren (egal ob Chronogram)
+    <ul>
+      <li><code class="highlighter-rouge">&lt;date when="1807-06-09"&gt;</code>June 9th<code class="highlighter-rouge">&lt;/date&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;residence from="1856-03" to="1858-04"&gt;</code>From sometime in March of
+ 1856 to sometime in April of 1858.<code class="highlighter-rouge">&lt;/residence&gt;</code>
+ 	+ <code class="highlighter-rouge">&lt;birth notBefore="1857-03-01"
+ notAfter="1857-04-30"&gt;</code>Some time in
+ March or April of 1857.<code class="highlighter-rouge">&lt;/birth&gt;</code>
+ 	+ Siehe: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html</a>
+ 	+ Für nicht-gregorianische Kalender siehe die Dokumentation von <a href="https://www.github.com/openarabicpe">OpenArabicPE</a> bzw. <a href="https://www.github.com/tillgraller/digital-muqtabas">Digital Muqtabas</a></li>
+    </ul>
+  </li>
+  <li><strong>Personen</strong>
+    <ul>
+      <li>That silly man
+<code class="highlighter-rouge">&lt;name role="politician" type="person"&gt;</code>David Paul Brown<code class="highlighter-rouge">&lt;/name&gt;</code> has suffered …</li>
+      <li>Siehe: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html</a></li>
+    </ul>
+  </li>
+  <li><strong>Orte</strong> (auch Regionen usw.)
+    <ul>
+      <li>I never fly from <code class="highlighter-rouge">&lt;name key="LHR" type="place"&gt;</code>Heathrow Airport<code class="highlighter-rouge">&lt;/name&gt;</code>
+to</li>
+    </ul>
+  </li>
+</ul>
+<name key="FR" type="place">France</name>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ Siehe: &lt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html&gt; 
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Namen</strong>
+    <ul>
+      <li><code class="highlighter-rouge">&lt;persName&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;surname&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;forename&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;roleName&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;addName&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;nameLink&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;genName&gt;</code></li>
+    </ul>
+
+    <p>Bsp:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ~~~{.xml}
+  &lt;persName&gt;
+      &lt;forename type="first"&gt;Franklin&lt;/forename&gt;
+      &lt;forename type="middle"&gt;Delano&lt;/forename&gt;
+      &lt;surname&gt;Roosevelt&lt;/surname&gt;
+  &lt;/persName&gt;
+  ~~~
+</code></pre></div>    </div>
+
+    <ul>
+      <li>Siehe: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html</a></li>
+    </ul>
+  </li>
+  <li><strong>Gruppen von Leuten</strong> (z.B. Wenn oft Leute auf dem Markt)
+    <ul>
+      <li><code class="highlighter-rouge">&lt;orgName&gt;</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p><a href="./">Zurück zur Startseite</a></p>
+
+
+      </section>
+      <footer>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+    
+  </body>
+</html>

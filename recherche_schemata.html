@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Was sind Schemata? | Dokumentation &amp; Workflow Digitale Edition OIB</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="Was sind Schemata?" />
+<meta name="author" content="Julia Dolhoff" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut" />
+<meta property="og:description" content="Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut" />
+<link rel="canonical" href="http://localhost:4000/recherche_schemata.html" />
+<meta property="og:url" content="http://localhost:4000/recherche_schemata.html" />
+<meta property="og:site_name" content="Dokumentation &amp; Workflow Digitale Edition OIB" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-11-02T00:00:00+02:00" />
+<script type="application/ld+json">
+{"description":"Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut","author":{"@type":"Person","name":"Julia Dolhoff"},"@type":"BlogPosting","url":"http://localhost:4000/recherche_schemata.html","headline":"Was sind Schemata?","dateModified":"2017-11-02T00:00:00+02:00","datePublished":"2017-11-02T00:00:00+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/recherche_schemata.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Dokumentation & Workflow Digitale Edition OIB</h1>
+        <p>Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="" class="button fork"><strong>View On GitHub</strong></a>
+        
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1 id="was-sind-schemata">Was sind Schemata?</h1>
+
+<p>Ein XML-Dokument mit einer korrekten Syntax wird <strong>Well Formed</strong> genannt. Durch die Validation mithilfe eines Schemata wird es zusätzlich <strong>Valid</strong> genannt.</p>
+
+<p>Das Schema dient zur Definition der Struktur eines XML-Dokuments um die erlaubten Elemente festzulegen.</p>
+
+<h1 id="technische-formate--sprache">Technische Formate / Sprache</h1>
+<h2 id="dtd">DTD</h2>
+
+<ul>
+  <li>Dokument Type Definition</li>
+  <li>Strukturplan für ein XML-Dokument</li>
+  <li>Konsistenz</li>
+  <li>Nicht spezifisch für ein Dokument, mehrere können davon gebrauch machen</li>
+  <li>Kompatibel mit gesamten XML Vokabular</li>
+  <li>Ein XML-Dokument darf nur auf ein DTD zugreifen</li>
+</ul>
+
+<h3 id="vorteile">Vorteile:</h3>
+
+<ul>
+  <li>Festlegen eines Standards für die gemeinsame Arbeit unabhängiger Gruppen an Daten</li>
+  <li>Verifikation erhaltender Daten von außerhalb bezüglich ihrer Validität</li>
+  <li>Verifikation eigener Daten bezüglich ihrer Validität</li>
+</ul>
+
+<h3 id="nachteil">Nachteil:</h3>
+
+<ul>
+  <li>Ältestes hier vorgestelltes Schema</li>
+  <li>Noch verbreitet, wird jedoch nicht mehr weiterentwickelt</li>
+</ul>
+
+<h2 id="xml-schema-xsd">XML-Schema: XSD</h2>
+
+<ul>
+  <li>Strukturplan für ein XML-Dokument</li>
+  <li>XMI Syntax ermöglich parsen</li>
+  <li>Unterstützte Datentypen: Integer, String, Boolean; sowie mögliche definition weiterer Datentypen</li>
+  <li>Globale und Gruppen Elemente erlaubt
+    <ul>
+      <li><strong>all</strong>: Alle Elemente genau einmal enthalten</li>
+      <li><strong>sequence</strong>: Elemente mindestens einmal enthalten</li>
+      <li><strong>choice</strong>: Auswahl mehrerer Möglichkeiten</li>
+    </ul>
+  </li>
+  <li>Lokale Elemente (spezielle Bedeutung im Kontext) erlaubt</li>
+  <li>Unterstützung vom IE 5.5</li>
+</ul>
+
+<h3 id="vorteile-1">Vorteile:</h3>
+
+<ul>
+  <li>In XML geschrieben
+    <ul>
+      <li>Keine neue Sprache</li>
+      <li>Von XML Editoren unterstützt</li>
+      <li>Von XML Parsern unterstützt</li>
+      <li>Manipulation mit DOM möglich</li>
+      <li>Transformation mit XSLT möglich</li>
+    </ul>
+  </li>
+  <li>Erweiterbar für Ergänzungen</li>
+  <li>Unterstützung von Datentypen und Namespaces
+    <ul>
+      <li>Einfache Beschreibung der Dokumenteninhalte</li>
+      <li>Einfache Definition der Einschränkungen in den Daten</li>
+      <li>Einfache Validierung der Korrektheit der Daten</li>
+      <li>Einfache transformation zwischen unterschiedlichen Datentypen</li>
+    </ul>
+  </li>
+  <li>Mitführen der Beschreibung des eigenen Formates</li>
+  <li>Festlegen eines Standards für die gemeinsame Arbeit unabhängiger Gruppen an Daten</li>
+  <li>Verifikation von Daten</li>
+  <li>W3C-Standard -&gt; sehr weit verbreitet</li>
+</ul>
+
+<h2 id="relaxng">RelaxNG</h2>
+
+<ul>
+  <li>Relax Next Generation</li>
+  <li>Schemasprache für XML-Dokumente</li>
+</ul>
+
+<h3 id="vorteile-2">Vorteile:</h3>
+
+<ul>
+  <li>Simpel und einfach zu lernen</li>
+  <li>Besitzt sowohl eine XML-Syntax als auch eine kompakte nicht-XML-Syntax</li>
+  <li>Verändert nicht das Informationsset des XML</li>
+  <li>Unterstützt Namespaces</li>
+  <li>Soweit möglich werden Attribute und Elemente gleichermaßen behandelt</li>
+  <li>Uneingeschränkte Unterstützung ungeordneter Inhalte</li>
+  <li>Uneingeschränkte Unterstützung gemischter Inhalte</li>
+  <li>Solide theoretische Basis</li>
+  <li>Ist mit einer separaten Datentypen Sprache vereinbar wie beispielsweise W3C XML Schema Datatypes</li>
+  <li>ISO Standard, leider nicht so sehr verbreitet wie XML Schema</li>
+  <li>Für reguläre Ausdrücke siehe: <a href="http://books.xmlschemata.org/relaxng/relax-CHP-9.html">http://books.xmlschemata.org/relaxng/relax-CHP-9.html</a></li>
+</ul>
+
+<h2 id="schematron">Schematron</h2>
+
+<ul>
+  <li>Validierung von:
+    <ul>
+      <li>Business Regeln</li>
+      <li>Datenberichten</li>
+      <li>Qualitätskontrolle</li>
+      <li>Statistische Konsistenz</li>
+      <li>Generelle Validierung</li>
+      <li>Filterungen</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="vorteile-3">Vorteile:</h3>
+
+<ul>
+  <li>Simple und aussagestarke Schematasprache</li>
+  <li>Nur 5 wichtige Elemente enthalten</li>
+  <li>Ausdruck vieler Einschränkungen die in anderen Schemasprachen unmöglich sind</li>
+  <li>ISO Standard</li>
+  <li>Dient zur Unterstützung der Schema-Sprachen DTD, XML Schema und Relax NG</li>
+</ul>
+
+<h1 id="wie-werden-schemata-generiert">Wie werden Schemata generiert?</h1>
+
+<h2 id="tools">Tools</h2>
+
+<ul>
+  <li><a href="http://www.tei-c.org/Roma/">TEI Roma</a>
+    <ul>
+      <li>Generierung eines TEI Schemas aus einem TEI zugeschnittenen Dokument</li>
+      <li>Definition der gebrauchten Elemente und Attribute</li>
+      <li>Kann in allen zuvor genannten Schematasprachen ausgedrückt werden</li>
+    </ul>
+  </li>
+  <li><a href="https://www.oxygenxml.com/xml_editor/xml_schema_editor.html">XML Schema (XSD) Editor</a>
+    <ul>
+      <li>Assistenten Tool zur Bearbeitung und Validierung von XML Schema</li>
+      <li>Schneller Zugang zu gängigen Aktionen in der Schemagenerierung</li>
+    </ul>
+  </li>
+  <li><a href="https://www.oxygenxml.com/xml_editor/xml_schema_diagram_editor.html">Visual XML Schema Diagram Editor (Design Mode)</a>
+    <ul>
+      <li>Schema-Diagramm-Editor</li>
+      <li>Intuitiv, leichte Bedienung</li>
+      <li>Für komplexe Schemata geeignet</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="odd-one-document-does-it-all">ODD (One Document Does It All)</h2>
+
+<ul>
+  <li>Zweck:
+    <ul>
+      <li>Dokumentation der XML-Elemente und Elementklassen</li>
+      <li>Automatische Generierung eines Schemas</li>
+      <li>Alles anhand der TEI Guidelines</li>
+    </ul>
+  </li>
+  <li>ODD erzeugt aus einem einzelnen XML-Dokument multiple Outputs mit folgendem Inhalt:
+    <ul>
+      <li>Formale Referenz-Dokumentation für Elemente, Attribute, Elementklassen, Strukturen</li>
+      <li>Detaillierte deskriptive Dokumentation einschließlich einiger Aspekte der formalen Referenz-Dokumentation wie bspw. die Tag-Listen-Beschreibung</li>
+      <li>Deklarativer Code für eine oder mehrere XML Schema-Sprachen wie: RELAX NG, W3C Schema, ISO Schematron, DTD.</li>
+    </ul>
+  </li>
+  <li>TEI ist in ODD geschrieben</li>
+  <li>ODD Dokument = TEI XML Dokument mit tagdocs Modul
+    <ul>
+      <li>Beinhaltet eine Serie an Elementen für eine Schemaspezifikation bzw. Modifikation der TEI Elementenstruktur.</li>
+    </ul>
+  </li>
+  <li>Siehe dazu: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TD.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TD.html</a></li>
+</ul>
+
+<h1 id="fazit">Fazit</h1>
+
+<p>Für unsere Zwecke scheint das <strong>XML-Schema</strong> am sinnvollsten, da es in XML geschrieben ist und kompatibel mit bereits verwendeten Editoren und Parsern.
+Die Unterstützung von XML-Schema mit <strong>Relax NG</strong> ist sinnvoll, da es Regeln mithilfe von regulären Ausdrücken miteinbeziehen kann.</p>
+
+<h1 id="quellen">Quellen</h1>
+
+<ul>
+  <li><a href="http://www.devtrain.de/artikel_445.aspx">DTD vs. XML Schema - Wachablösung in der XML Validierung</a></li>
+  <li><a href="https://www.w3schools.com/xml/xml_dtd.asp">w3schools DTD</a></li>
+  <li><a href="https://www.w3schools.com/xml/xml_dtd_intro.asp">w3school DTD Tutorial</a></li>
+  <li><a href="https://www.w3schools.com/xml/xml_schema.asp">w3schools Schema</a></li>
+  <li><a href="https://www.w3schools.com/xml/schema_intro.asp">w3school Schema Tutorial</a></li>
+  <li><a href="http://relaxng.org/">RelaxNG</a></li>
+  <li><a href="http://schematron.com/">Schematron.com</a></li>
+  <li><a href="http://www.schematron.de/">Zukünftige deutsche Schematron Info und Tutorial Webseite</a></li>
+  <li><a href="https://www.video2brain.com/de/tutorial/dtd-schema-und-relaxng">video2brain</a></li>
+</ul>
+
+<hr />
+
+<h1 id="-zurück-zur-startseite">↳ <a href="./">Zurück zur Startseite</a></h1>
+
+
+      </section>
+      <footer>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+    
+  </body>
+</html>

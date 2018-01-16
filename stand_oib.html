@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Was ist eine digitale Edition? | Dokumentation &amp; Workflow Digitale Edition OIB</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="Was ist eine digitale Edition?" />
+<meta name="author" content="Julia Dolhoff" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut" />
+<meta property="og:description" content="Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut" />
+<link rel="canonical" href="http://localhost:4000/stand_oib.html" />
+<meta property="og:url" content="http://localhost:4000/stand_oib.html" />
+<meta property="og:site_name" content="Dokumentation &amp; Workflow Digitale Edition OIB" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-19T00:00:00+03:00" />
+<script type="application/ld+json">
+{"description":"Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut","author":{"@type":"Person","name":"Julia Dolhoff"},"@type":"BlogPosting","url":"http://localhost:4000/stand_oib.html","headline":"Was ist eine digitale Edition?","dateModified":"2017-10-19T00:00:00+03:00","datePublished":"2017-10-19T00:00:00+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/stand_oib.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Dokumentation & Workflow Digitale Edition OIB</h1>
+        <p>Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="" class="button fork"><strong>View On GitHub</strong></a>
+        
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1 id="stand-der-dinge-am-oib">Stand der Dinge am OIB</h1>
+
+<p><strong>12. Oktober 2017</strong></p>
+
+<p>Nachfolgend wird der aktuelle technische und strukturelle Stand am Orient-Institut Beirut festgehalten, sowie ein Ausblick für die benötigten technischen Grundsätzen gegeben.</p>
+
+<h2 id="welche-strukturen-werkzeuge-und-formate-werden-am-oib-eingesetzt">Welche Strukturen, Werkzeuge und Formate werden am OIB eingesetzt?</h2>
+
+<ul>
+  <li>
+    <p>In vielen Projekten wird hauptsächlich mit <strong>Microsoft Office</strong> gearbeitet, Dateien werden zudem in Microsoft Dateiformaten abgespeichert. Seit 2007 werden Microsoft XML-basierte Formate wie .docx, .xslx, .pptx benutzt. Es existieren jedoch ebenfalls Dateien in älternen Formaten wie beispielsweise: .doc, .xsl, .ppt.</p>
+
+    <p><strong>Probleme:</strong></p>
+    <ul>
+      <li>Auf die älteren Formate kann ohne eine Lizenz nicht zugegriffen werden.</li>
+      <li>Die verwendeten Formate sind generell nicht ausreichend doumentiert und müssen in Microsoft-fremden Umgebungen rekonstruiert werden.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>PDF</strong> wird oft als Standard Outputformat verwendet.</p>
+
+    <p><strong>Probleme:</strong></p>
+    <ul>
+      <li>Bei PDF handelt es sich um ein proprietäres Format von Adobe.</li>
+      <li>Das Format ist nicht ausreichend dokumentiert.</li>
+      <li>Ein professionelles arbeiten mit diesem Format ist ohne den Erwerb von kostspieligen Lizenzen für die dazugehörigen Abode-Anwendungen nicht möglich.</li>
+      <li>Das Format dient mehr zu präsentations Zwecken als zur Weiterverarbeitung von Dokumenten.</li>
+      <li>PDF-Dateien werden nicht sequenziell geladen und sind daher für webbasierte Anwendungen nicht geeignet.</li>
+      <li>Gemeinsames arbeiten an einem Quelltext ist durch den stark eingeschränkten Bearbeitungsmodus nicht möglich.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Siehe hierzu: Grallert, Till: Technische Aspekte, oder: the D in Digital Humanities (2015), URL: <a href="http://www.sitzextase.de/blog/2015/02/23/workshop-editions-material/">http://www.sitzextase.de/blog/2015/02/23/workshop-editions-material/</a></p>
+
+<h2 id="benötigte-technische-grundsätze">Benötigte technische Grundsätze</h2>
+
+<ul>
+  <li>Gute <strong>Dokumentation</strong> aller verwendeter Sprachen und Software.</li>
+  <li><strong>Reintextformate</strong> benutzen um auch in Zukunft Software- und Betriebssytemunabhängig zu bleiben.</li>
+  <li>Möglichst wenige, wenn nicht sogar nur ein einziges <strong>simples Format/Sprache</strong> verwenden, dadurch können Dateien auch von ungeübten Nutzern bearbeitet werden.</li>
+  <li>Etablierte <strong>open source</strong> Software verwenden. Am besten mit einer großen Community um Abhängigkeiten von einzelnen Anbietern zu vermeiden.</li>
+  <li>Alle verwendeten Formate müssen sowohl <strong>menschen-</strong> als auch <strong>maschinenlesbar</strong> sein. Somit bleibt das Produzierte (jedoch ohne Funktionalitäten) selbst auf Papier verständlich.</li>
+</ul>
+
+<h2 id="retro-digitalisierung">(Retro) Digitalisierung</h2>
+<p>In Absprache mit der Martin-Luther-Universität Halle-Wittenberg werden die zwei Reihen <a href="http://menadoc.bibliothek.uni-halle.de/search?operation=searchRetrieve&amp;query=%28vl.series.idn%3D130734632%20or%20vl.series%3D%22Bibliotheca%20islamica%22%29%20and%20vl.domain%3Dssg%20sortBy%20dc.date%2Fdesc">Bibliotheca Islamica</a> und <a href="http://menadoc.bibliothek.uni-halle.de/search?operation=searchRetrieve&amp;query=%28vl.series.idn%3D130106933%20or%20vl.series%3D%22Beiruter%20Texte%20und%20Studien%22%29%20and%20vl.domain%3Dmenadocihd%20sortBy%20dc.date%2Fdesc">Beiruter Texte und Studien</a> als Digitalisate auf der Plattform MENAdoc veröffentlicht und archiviert.</p>
+
+<p>Die Digitalisate sind frei zugänglich und mit einer permanenten URL ausgezeichnet.</p>
+
+<p>Die Reihe <a href="http://www.perspectivia.net/publikationen/orient-institut-studies/1-2012">Orient Institut Studies</a> ist auf der Publikationsplattform perspectivia.net der Max-Weber-Stiftung veröffentlicht.</p>
+
+<p>Siehe dazu:</p>
+
+<ul>
+  <li><a href="http://menadoc.bibliothek.uni-halle.de/">Die MENAdoc-Sammlung</a></li>
+  <li><a href="http://www.perspectivia.net/">perspectivia.net</a></li>
+</ul>
+
+<hr />
+
+<h1 id="-zurück-zur-startseite">↳ <a href="./">Zurück zur Startseite</a></h1>
+
+
+
+      </section>
+      <footer>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+    
+  </body>
+</html>

@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Transformation einer .docx Datei in eine TEI P5-XML Datei | Dokumentation &amp; Workflow Digitale Edition OIB</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="Transformation einer .docx Datei in eine TEI P5-XML Datei" />
+<meta name="author" content="Julia Dolhoff" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut" />
+<meta property="og:description" content="Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut" />
+<link rel="canonical" href="http://localhost:4000/transformation_docxToTei.html" />
+<meta property="og:url" content="http://localhost:4000/transformation_docxToTei.html" />
+<meta property="og:site_name" content="Dokumentation &amp; Workflow Digitale Edition OIB" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-19T00:00:00+03:00" />
+<script type="application/ld+json">
+{"description":"Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut","author":{"@type":"Person","name":"Julia Dolhoff"},"@type":"BlogPosting","url":"http://localhost:4000/transformation_docxToTei.html","headline":"Transformation einer .docx Datei in eine TEI P5-XML Datei","dateModified":"2017-10-19T00:00:00+03:00","datePublished":"2017-10-19T00:00:00+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/transformation_docxToTei.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Dokumentation & Workflow Digitale Edition OIB</h1>
+        <p>Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="" class="button fork"><strong>View On GitHub</strong></a>
+        
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1 id="transformation-einer-docx-datei-in-eine-tei-p5-xml-datei">Transformation einer .docx Datei in eine TEI P5-XML Datei</h1>
+
+<p><strong>Die Ergebnisse der Transformationen sind zu finden unter:</strong></p>
+
+<p><code class="highlighter-rouge">/Praktikanten OIB/DH-Praktikum/Transformation_Dateien/</code></p>
+
+<p>oder auf der Github <!-- hier noch den Link einfügen! --> Seite</p>
+
+<h2 id="mit-oxygen-xml-editor">Mit Oxygen XML Editor:</h2>
+
+<p><strong>Versuch 1</strong> mit einer <strong>deutschprachigen Datei</strong> Digitale_Edition.docx.</p>
+
+<p>Zu finden im Verzeichnis: <code class="highlighter-rouge">/Praktikanten OIB/DH-Praktikum/Digitale_Edition.docx</code></p>
+
+<p>Das Dokument beinhaltet zu lange Zeilen, daher gibt Oxygen folgende Warnung aus:</p>
+<blockquote>
+  <p>Dieses Dokument enthält lange Zeilen, welche die Performance des Text-Editors beeinträchtigen können.Die längste Zeile enthält 49.409 Zeichen.
+Diese Warnung wird nur für Dokumente angezeigt, die Zeilen mit mehr als 15.000 Zeichen enthalten (siehe die öffnen/speichern Seite im Editor -&gt; in den Einstellungen).</p>
+
+  <p>Wenn Sie fortfahren, wird die Unterstützung für ‘Line wrap’ eingeschaltet und einige Editor-Eigenschaften werden ausgeschaltet.</p>
+</blockquote>
+
+<p>Oxygen arbeitet generell sehr langsam, jedoch kann man den Speicher erhöhen um die Gewindigkeit zu steigern. Siehe dazu die Anleitungen für Windows, OS X und Linux: <a href="https://www.oxygenxml.com/doc/versions/19.0/ug-editor/topics/set-parameters-for-application-launchers.html">https://www.oxygenxml.com/doc/versions/19.0/ug-editor/topics/set-parameters-for-application-launchers.html</a>.</p>
+
+<p>In Transformations-Szenarien DOCX TEI P5 wählen und Szenario anwenden.</p>
+
+<ul>
+  <li>TEI-Header erstellt</li>
+  <li>Alle Überschriften wurden erfasst (xml:id)</li>
+  <li>Stile der Schrift wurden erfasst (bold; italic)</li>
+  <li>Fußnoten wurden erfasst (note)</li>
+  <li>Links wurden erfasst (ref target=)</li>
+  <li>Listen wurden erfasst (item)</li>
+  <li>Abstufungen im Text wurden erfasst (rend=”First Paragraph”; type=”unordered”)</li>
+  <li>Keine Links</li>
+</ul>
+
+<p>Fehler:</p>
+
+<ul>
+  <li>Zeile 412: “## Benötigte technische Grundsätze” -&gt; vermutlich bereits bei der Überführung des Markdown-Dokuments in Word entstanden</li>
+  <li>Zeile 495: “[^siehe dazu: IDE]:”</li>
+</ul>
+
+<p>–&gt; Bei der Transformation mit einer .odt Datei werden Überschriften mit &lt;div&gt; und &lt;head&gt; ausgezeichnet.</p>
+
+<p><strong>Versuch 2</strong> mit einer <strong>arabischsprachigen Datei</strong> <code class="highlighter-rouge">test\_arabic.docx</code></p>
+
+<p>Dabei wurden lediglich die erste Seiten aus der Datei <code class="highlighter-rouge">Gotha orient. A 114 - Arabic final.docx</code> in eine Test-Datei Kopiert und anschließend in Oxygen geöffent.</p>
+
+<p>Oxygen arbeitet erneut sehr langsam um die Datei zu öffnen, das Konvertieren geht dafür sehr schnell.</p>
+
+<p><strong>Versuch 3</strong> mit der kompletten <strong>arabischsprachigen Datei</strong> <code class="highlighter-rouge">Gotha orient. A 114 - Arabic final.docx.</code></p>
+
+<p>Zu finden in dem Verzeichnis:
+<code class="highlighter-rouge">OIB/DH-Praktikum/Gotha orient. A 114 - Arabic final.docx</code></p>
+
+<p>Zu große Datenmenge, Oxygen arbeitet sehr langsam.</p>
+
+<p><strong>Anmerkungen:</strong></p>
+
+<ul>
+  <li>Keine Sprachinfos (In Word-Datei vorhanden?!)</li>
+</ul>
+
+<h2 id="mit-pandoc">Mit Pandoc:</h2>
+
+<p>Pandoc ist ein Kommandozeilenbasiertes Programm und besitzt kein Interface.
+Die Installation ist sehr einfach.</p>
+
+<p>Der Befehl für die Konvertierung lautet:
+<code class="highlighter-rouge">pandoc \&lt;filename&gt; -f docx -t tei -o \&lt;output_filename.xml&gt;</code></p>
+
+<p>Dabei wird das Dokument sehr schnell in TEI simple konvertiert. Es handelt sich dabei um den Standard der einfachen Textverarbeitung. Das vorliegende arabische Dokument weist wenige Formatierungen auf, wodurch der Einsatz von TEI Simple durchaus erwähnt werden sollte.</p>
+
+<p><strong>Anmerkungen:</strong></p>
+
+<ul>
+  <li>Überschriften werden nicht erfasst (nur als &lt;p&gt;)</li>
+</ul>
+
+<h2 id="mit-oxgarage">Mit OxGarage:</h2>
+
+<p><a href="http://www.tei-c.org/oxgarage/#">TEI - OxGarage</a> ist ein Web- und RESTful- Service mithilfe dessen Dokumente in andere Formate transformiert werden können. Z.B. von TEI zu Word (.docx) oder umgekehrt.</p>
+
+<p>Für weitere Informationen siehe: <a href="http://www.tei-c.org/Tools/">http://www.tei-c.org/Tools/</a>.</p>
+
+<p><strong>Anmerkungen:</strong></p>
+
+<ul>
+  <li>Konvertierung geht sehr schnell, Datei kann direkt heruntergeladen werden.</li>
+  <li>Keine rechtlichen Probleme, da OxGarage die Dokumente nicht speichert.</li>
+</ul>
+
+<h2 id="mit-tustep">Mit Tustep:</h2>
+
+<p>DOCX -&gt; RTF -&gt; TUSTEP Ersetze -&gt; XML-TEI (-&gt; RTF Export -&gt; DOCX)</p>
+
+<p>Word-Dokument in LibreOffice als RTF abspeichern und anschließend in Tustep öffnen.</p>
+
+<p><strong>Anmerkungen:</strong></p>
+
+<ul>
+  <li>Tustep erkennt das Dokument nicht wenn Dateiname länger als 10 Zeichen</li>
+</ul>
+
+<h1 id="ergebnis">Ergebnis:</h1>
+
+<h3 id="oxygen">Oxygen</h3>
+
+<ul>
+  <li>Metadaten aus der Word-Datei</li>
+  <li>Schema Validation nicht verlinkt</li>
+  <li>Source-desc muss mit Inhalt gefüllt werden (ist noch nicht da)</li>
+  <li>listChange könnte ausführlicher sein (steht nicht drin was gemacht wurde)</li>
+  <li>Attributwerte beinhalten Leerzeichen</li>
+  <li>Fußnoten in ordnung</li>
+  <li>Tabellen: nicht jeder Text ist in &lt;p&gt;</li>
+  <li>stylesheet &lt;output indent =”no”&gt; muss auf yes gestellt werden damit Text eingerückt wird (stylesheet auf github)</li>
+</ul>
+
+<h3 id="oxgarage">OxGarage</h3>
+
+<ul>
+  <li>Gleich wie Oxygen</li>
+</ul>
+
+<h3 id="pandoc">Pandoc</h3>
+
+<ul>
+  <li>Wurzelknoten fehlt</li>
+  <li>Für wellformed und valid: -s dranhängen (standalone)
+-&gt; Der Befehl für die Konvertierung lautet:
+<code class="highlighter-rouge">pandoc \&lt;filename&gt; -f docx -t tei -o \&lt;output_filename.xml -s&gt;</code></li>
+  <li>TEI Schema fehlt</li>
+  <li>Datei selber keine valide TEI (Title-Statement, publication leer)</li>
+  <li>Schaut sich Struktur an (fügt &lt;div&gt; hinzu wenn nötig)</li>
+  <li>Keine Informationen über Stile</li>
+  <li>footnode nicht eindeutig</li>
+</ul>
+
+<h3 id="tustep">Tustep</h3>
+<ul>
+  <li>Tagnamen nicht Sprachabhängig</li>
+</ul>
+
+<h1 id="was-wir-brauchen">Was wir brauchen:</h1>
+
+<ul>
+  <li>Leerzeichen ersetzen aus Attributwerten (z.B. Bindestrich oder camelCase)</li>
+  <li>Gliedernde Struktur in &lt;div&gt; (dort wo heading ist)</li>
+  <li>Flacher Input muss in verschachtelte Output-Struktur überführt werden</li>
+  <li>Verschachtelungs-Level hängt an Überschriften in Word (z.B. &lt;rend=”heading 4”&gt;)</li>
+  <li>Inline CSS vom Text trennen (soll im TEI-header landen)</li>
+  <li>Überschriften- und Inhaltszeilen in Tabellen festlegen</li>
+  <li>Es wurde versucht die Elemente grafisch nachzubauen mithilfe von Tabellen (haben z.B. nur eine Spalte)</li>
+  <li>Gedrehte Wörter vorhanden -&gt; Transformation versucht sie mithilfe von CSS darzustellen -&gt; ERROR</li>
+</ul>
+
+<h2 id="anforderung-an-word">Anforderung an Word</h2>
+
+<ul>
+  <li>Stile wie bspw. Überschriften, Seitenumbruch</li>
+</ul>
+
+<hr />
+
+<h1 id="-zurück-zur-startseite">↳ <a href="./">Zurück zur Startseite</a></h1>
+
+
+      </section>
+      <footer>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+    
+  </body>
+</html>

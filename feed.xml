@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-16T16:52:20+02:00</updated><id>http://localhost:4000/</id><title type="html">Dokumentation &amp;amp; Workflow Digitale Edition OIB</title><subtitle>Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut</subtitle><entry><title type="html">Auszeichnung In Tei</title><link href="http://localhost:4000/2017/11/06/Auszeichnung-in-TEI.html" rel="alternate" type="text/html" title="Auszeichnung In Tei" /><published>2017-11-06T00:00:00+02:00</published><updated>2017-11-06T00:00:00+02:00</updated><id>http://localhost:4000/2017/11/06/Auszeichnung-in-TEI</id><content type="html" xml:base="http://localhost:4000/2017/11/06/Auszeichnung-in-TEI.html">&lt;hr /&gt;
+&lt;p&gt;title: “Dokumentation: Auszeichnungen für TEI Editionen arabischer Manuskripte”
+author: Julia Dolhoff &amp;amp; Till Grallert
+date: 2017-11-06 10:22:16 +0200
+—&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;./&quot;&gt;Zurück zur Startseite&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;besprechung-benötigter-auszeichnungen-für-die-digitale-edition-der-bi--bts-26102017&quot;&gt;Besprechung benötigter Auszeichnungen für die digitale Edition der BI / BTS (26.10.2017)&lt;/h1&gt;
+
+&lt;h2 id=&quot;generelle-anmerkungen&quot;&gt;Generelle Anmerkungen:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Word Datei liegt ohne Auszeichnungen vor&lt;/li&gt;
+  &lt;li&gt;Text später alles auf Arabisch (auch Fußnoten), nur Einleitung auf Englisch&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1-strukturelemente-block-level-zb-text-paragraph-gedicht&quot;&gt;1. Strukturelemente: block-level (z.B. Text, Paragraph, Gedicht)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Einheiten im Text&lt;/strong&gt; (einzelne Einträge) / &lt;strong&gt;Geschichten&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Beispiel:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ~~~{.xml}
+  &amp;lt;text&amp;gt;
+  &amp;lt;!-- Section on Alexander Pope starts --&amp;gt;
+      &amp;lt;front&amp;gt;
+      &amp;lt;!-- biographical notice by editor --&amp;gt;
+      &amp;lt;/front&amp;gt;
+      &amp;lt;group&amp;gt;
+          &amp;lt;text&amp;gt;
+          &amp;lt;!-- first poem --&amp;gt;
+          &amp;lt;/text&amp;gt;
+          &amp;lt;text&amp;gt;
+          &amp;lt;!-- second poem --&amp;gt;
+          &amp;lt;/text&amp;gt;
+      &amp;lt;/group&amp;gt;
+  &amp;lt;/text&amp;gt;
+  ~~~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Siehe: &lt;a href=&quot;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html&quot;&gt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Gedichte&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Beispiel:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ~~~{.xml}
+  &amp;lt;text&amp;gt;
+      &amp;lt;body&amp;gt;
+          &amp;lt;head&amp;gt;My Alba&amp;lt;/head&amp;gt;
+          &amp;lt;lg&amp;gt;
+              &amp;lt;l&amp;gt;Now that I've wasted&amp;lt;/l&amp;gt;
+              &amp;lt;l&amp;gt;five years in Manhattan&amp;lt;/l&amp;gt;
+              &amp;lt;l&amp;gt;life decaying&amp;lt;/l&amp;gt;
+              &amp;lt;l&amp;gt;talent a blank&amp;lt;/l&amp;gt;
+          &amp;lt;/lg&amp;gt;
+          &amp;lt;lg&amp;gt;
+              &amp;lt;l&amp;gt;talking disconnected&amp;lt;/l&amp;gt;
+              &amp;lt;l&amp;gt;patient and mental&amp;lt;/l&amp;gt;
+              &amp;lt;l&amp;gt;sliderule and number&amp;lt;/l&amp;gt;
+              &amp;lt;l&amp;gt;machine on a desk&amp;lt;/l&amp;gt;
+          &amp;lt;/lg&amp;gt;
+      &amp;lt;/body&amp;gt;
+  &amp;lt;/text&amp;gt;
+  ~~~		
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;In arabischen Gedichten kommen oft Halbzeilen vor: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;seg&amp;gt;&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Beispiel:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ~~~{.xml}
+  &amp;lt;text&amp;gt;
+      &amp;lt;body&amp;gt;
+          &amp;lt;l type = &quot;bayt&quot;&amp;gt;
+              &amp;lt;seg&amp;gt;Now that I've wasted&amp;lt;/seg&amp;gt;
+              &amp;lt;seg&amp;gt;five years in Manhattan&amp;lt;/seg&amp;gt;
+              &amp;lt;seg&amp;gt;life decaying&amp;lt;/seg&amp;gt;
+              &amp;lt;seg&amp;gt;talent a blank&amp;lt;/seg&amp;gt;
+          &amp;lt;/l&amp;gt;
+          &amp;lt;l&amp;gt;
+              &amp;lt;seg&amp;gt;talking disconnected&amp;lt;/seg&amp;gt;
+              &amp;lt;seg&amp;gt;patient and mental&amp;lt;/seg&amp;gt;
+              &amp;lt;seg&amp;gt;sliderule and number&amp;lt;/seg&amp;gt;
+              &amp;lt;seg&amp;gt;machine on a desk&amp;lt;/seg&amp;gt;
+          &amp;lt;/l&amp;gt;
+      &amp;lt;/body&amp;gt;
+  &amp;lt;/text&amp;gt;
+  ~~~	
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Siehe: &lt;a href=&quot;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html&quot;&gt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Tabellen&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;table&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;row&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;cell&amp;gt;&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Beispiel:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ~~~{.xml}
+  &amp;lt;table&amp;gt;
+      &amp;lt;head&amp;gt;US State populations, 1990&amp;lt;/head&amp;gt;
+      &amp;lt;row role=&quot;label&quot;&amp;gt;
+          &amp;lt;cell&amp;gt;state&amp;lt;/cell&amp;gt;
+          &amp;lt;cell&amp;gt;population&amp;lt;/cell&amp;gt;
+      &amp;lt;/row&amp;gt;
+      &amp;lt;row role=&quot;data&quot;&amp;gt;
+          &amp;lt;cell&amp;gt;Wyoming&amp;lt;/cell&amp;gt;
+          &amp;lt;cell&amp;gt;453,588&amp;lt;/cell&amp;gt;
+      &amp;lt;/row&amp;gt;
+      &amp;lt;row role=&quot;data&quot;&amp;gt;
+          &amp;lt;cell&amp;gt;&amp;lt;placeName&amp;gt;Alaska&amp;lt;/placeName&amp;gt;&amp;lt;/cell&amp;gt;
+          &amp;lt;cell&amp;gt;&amp;lt;num value=&quot;550043&quot;&amp;gt;550,043&amp;lt;/num&amp;gt;&amp;lt;/cell&amp;gt;
+      &amp;lt;/row&amp;gt;
+  &amp;lt;/table&amp;gt;
+  ~~~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Einschübe&lt;/strong&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;floatingText&amp;gt;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Listen&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Beispiel:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ~~~{.xml}
+  &amp;lt;list type=&quot;ordered&quot;&amp;gt;
+      &amp;lt;item&amp;gt;a butcher&amp;lt;/item&amp;gt;
+      &amp;lt;item&amp;gt;a baker&amp;lt;/item&amp;gt;
+      &amp;lt;item&amp;gt;a candlestick maker, with
+          &amp;lt;list type=&quot;bullets&quot;&amp;gt;
+              &amp;lt;item&amp;gt;rings on his fingers&amp;lt;/item&amp;gt;
+              &amp;lt;item&amp;gt;bells on his toes&amp;lt;/item&amp;gt;
+          &amp;lt;/list&amp;gt;
+      &amp;lt;/item&amp;gt;
+  &amp;lt;/list&amp;gt;
+  ~~~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Siehe: &lt;a href=&quot;http://web.uvic.ca/lancenrd/martin/guidelines/ref-list.html&quot;&gt;http://web.uvic.ca/lancenrd/martin/guidelines/ref-list.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Rechnungen&lt;/strong&gt; (mit Ergebnis)
+    &lt;ul&gt;
+      &lt;li&gt;Zahlen: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;num&amp;gt;&lt;/code&gt; können mit &lt;code class=&quot;highlighter-rouge&quot;&gt;@value&lt;/code&gt; normalisiert werden.&lt;/li&gt;
+      &lt;li&gt;Maße: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;measure&amp;gt;&lt;/code&gt; und &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;measureGrp&amp;gt;&lt;/code&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;measure commodity=&quot;&quot; unit=&quot;&quot; quantity=&quot;&quot;/&amp;gt;&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-strukturelemente-block-level-oder-inline-zb-zitate-auslassungen&quot;&gt;2. Strukturelemente: block level oder inline (z.B. Zitate, Auslassungen)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Zitate&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Lexicography has shown little sign of being affected by the
+ work of followers of J.R. Firth, probably best summarized in his
+ slogan, &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;quote&amp;gt;&lt;/code&gt;You shall know a word by the company it
+ keeps&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;/quote&amp;gt;&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  `&amp;lt;ref&amp;gt;`(Firth, 1957)`&amp;lt;/ref&amp;gt;`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Siehe: &lt;a href=&quot;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-quote.html&quot;&gt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-quote.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Koranverse&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Könnten wir als Verse betrachten.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Beispiel:
+
+	~~~{.xml}
+	&amp;lt;text&amp;gt;
+		&amp;lt;front&amp;gt;
+			&amp;lt;head&amp;gt;1755&amp;lt;/head&amp;gt;
+		&amp;lt;/front&amp;gt;
+		&amp;lt;body&amp;gt;
+			&amp;lt;l&amp;gt;To make a prairie it takes a clover and one bee,&amp;lt;/l&amp;gt;
+			&amp;lt;l&amp;gt;One clover, and a bee,&amp;lt;/l&amp;gt;
+			&amp;lt;l&amp;gt;And revery.&amp;lt;/l&amp;gt;
+			&amp;lt;l&amp;gt;The revery alone will do,&amp;lt;/l&amp;gt;
+			&amp;lt;l&amp;gt;If bees are few.&amp;lt;/l&amp;gt;
+		&amp;lt;/body&amp;gt;
+	&amp;lt;/text&amp;gt;
+	~~~
+
++ Siehe: &amp;lt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Chronogram&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Wir schlagen &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;date&amp;gt;&lt;/code&gt; vor. Datum kann dann mit &lt;code class=&quot;highlighter-rouge&quot;&gt;@when&lt;/code&gt; und &lt;code class=&quot;highlighter-rouge&quot;&gt;@when-custom&lt;/code&gt; normalisiert werden.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hadith&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Bestandteile sind Überlieferungskette und Text.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-graphische-markierungen-inline-überstriche-farbliche-hervorhebungen-anführungszeichen&quot;&gt;2. Graphische Markierungen: inline (Überstriche, farbliche Hervorhebungen, Anführungszeichen)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Überschriften&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Das &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt; Element wird für jede Art Überschrift verwendet&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;head place=&quot;margin&quot;&amp;gt;&lt;/code&gt;Secunda conclusio&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;/head&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Siehe: &lt;a href=&quot;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-head.html&quot;&gt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-head.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Überstriche&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;hi rendition=&quot;#apples&quot;/&amp;gt;&lt;/code&gt;, wie “apples” dann aussehen soll, wird woanders festgelegt; z.B. formalisiert im teiHeader mit &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;rendition&amp;gt;&lt;/code&gt; (&lt;a href=&quot;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-rendition.html&quot;&gt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-rendition.html&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;hi rend=&quot;center&quot;/&amp;gt;&lt;/code&gt;, dann liegt keine maschinenlesbare Formalisierung vor.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Seitenzahlen und Umbrüche&lt;/strong&gt; (Seitenzahlen sind in [ ])
+  Beispiel:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ~~~{.xml}
+      &amp;lt;body&amp;gt;
+      &amp;lt;pb n=&quot;1&quot; facs=&quot;page1.png&quot;/&amp;gt;
+      &amp;lt;!-- page1.png contains an image of the page;
+      	the text it contains is encoded here --&amp;gt;
+      &amp;lt;p&amp;gt;
+      &amp;lt;!-- ... --&amp;gt;
+      &amp;lt;/p&amp;gt;
+      &amp;lt;pb n=&quot;2&quot; facs=&quot;page2.png&quot;/&amp;gt;
+      &amp;lt;!-- similarly, for page 2 --&amp;gt;
+      &amp;lt;p&amp;gt;
+      &amp;lt;!-- ... --&amp;gt;
+      &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+  ~~~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Siehe: &lt;a href=&quot;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html&quot;&gt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Gliedernde Querstriche&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Da Querstriche ein graphisches Element sind, könnten sie als &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;graphic&amp;gt;&lt;/code&gt; getaggt werden.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Highlight&lt;/strong&gt; (z.B. bei Überschriften oder farbig)
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;hi rend=&quot;gothic&quot;&amp;gt;&lt;/code&gt;And this Indenture further witnesseth&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;/hi&amp;gt;&lt;/code&gt;
+that the said &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;hi rend=&quot;italic&quot;&amp;gt;&lt;/code&gt;Walter Shandy&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;/hi&amp;gt;&lt;/code&gt;, merchant,
+in consideration of the said intended marriage …&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;indered a man’s proceedings who &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;hi rend=&quot;underline&quot;&amp;gt;&lt;/code&gt;had obtained all the letters to Mr Boyd&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;/hi&amp;gt;&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Beispiel @rendition:&lt;/p&gt;
+
+        &lt;pre&gt;&lt;code class=&quot;language-{.xml}&quot;&gt;      &amp;lt;head rendition=&quot;#ac #sc&quot;&amp;gt;
+          &amp;lt;lb/&amp;gt;To The &amp;lt;lb/&amp;gt;Duchesse &amp;lt;lb/&amp;gt;of &amp;lt;lb/&amp;gt;Newcastle, &amp;lt;lb/&amp;gt;On Her&amp;lt;lb/&amp;gt;
+          &amp;lt;hi rendition=&quot;#normal&quot;&amp;gt;New Blazing-World&amp;lt;/hi&amp;gt;.
+      &amp;lt;/head&amp;gt;
+      &amp;lt;!-- elsewhere... --&amp;gt;
+      &amp;lt;rendition xml:id=&quot;sc&quot; scheme=&quot;css&quot;&amp;gt;font-variant: small-caps&amp;lt;/rendition&amp;gt;
+      &amp;lt;rendition xml:id=&quot;normal&quot; scheme=&quot;css&quot;&amp;gt;font-variant: normal&amp;lt;/rendition&amp;gt;
+      &amp;lt;rendition xml:id=&quot;ac&quot; scheme=&quot;css&quot;&amp;gt;text-align: center&amp;lt;/rendition&amp;gt;
+      &amp;lt;rendition xml:id=&quot;red&quot;&amp;gt;color: red;&amp;lt;/rendition&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Siehe: &lt;a href=&quot;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-hi.html&quot;&gt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-hi.html&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Siehe: &lt;a href=&quot;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.global.rendition.html&quot;&gt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.global.rendition.html&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Siehe: &lt;a href=&quot;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html&quot;&gt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Fußnoten&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Beispiel:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ~~~{.xml}
+  &amp;lt;l&amp;gt;(Diff'rent our parties, but with equal grace&amp;lt;/l&amp;gt;
+  &amp;lt;l&amp;gt;The Goddess smiles on Whig and Tory race,&amp;lt;/l&amp;gt;
+  &amp;lt;l&amp;gt;
+      &amp;lt;note type=&quot;imitation&quot; place=&quot;bottom&quot; anchored=&quot;false&quot;&amp;gt;
+          &amp;lt;bibl&amp;gt;Virg. Æn. 10.&amp;lt;/bibl&amp;gt;
+          &amp;lt;quote&amp;gt;
+              &amp;lt;l&amp;gt;Tros Rutulusve fuat; nullo discrimine habebo.&amp;lt;/l&amp;gt;
+              &amp;lt;l&amp;gt;—— Rex Jupiter omnibus idem.&amp;lt;/l&amp;gt;
+          &amp;lt;/quote&amp;gt;
+      &amp;lt;/note&amp;gt;'Tis the same rope at sev'ral ends they twist,
+  &amp;lt;/l&amp;gt;
+  ~~~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Siehe: &lt;a href=&quot;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html&quot;&gt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3-editorische-eingriffe&quot;&gt;3. Editorische Eingriffe&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Seiten fehlen&lt;/strong&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;gap resp=&quot;&quot;/&amp;gt;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Verbesserungen und Streichungen&lt;/strong&gt; (meist: &amp;lt;verbessert in&amp;gt; [ursprünglich])
+    &lt;ul&gt;
+      &lt;li&gt;Streichungen&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Beispiel:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ~~~{.xml}
+  &amp;lt;l&amp;gt;
+      &amp;lt;del rend=&quot;overtyped&quot;&amp;gt;Mein&amp;lt;/del&amp;gt; Frisch
+      &amp;lt;del rend=&quot;overstrike&quot; type=&quot;primary&quot;&amp;gt;schwebt&amp;lt;/del&amp;gt; weht der Wind
+  &amp;lt;/l&amp;gt;
+  ~~~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Siehe: &lt;a href=&quot;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html&quot;&gt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Hinzufügungen: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;add&amp;gt;&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Beispiel:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ~~~{.xml}
+  &amp;lt;l&amp;gt;
+      &amp;lt;del rend=&quot;overtyped&quot;&amp;gt;Mein&amp;lt;/del&amp;gt; &amp;lt;add&amp;gt;Frisch&amp;lt;/add&amp;gt;
+      &amp;lt;del rend=&quot;overstrike&quot; type=&quot;primary&quot;&amp;gt;schwebt&amp;lt;/del&amp;gt; &amp;lt;add&amp;gt;weht&amp;lt;/add&amp;gt; der Wind
+  &amp;lt;/l&amp;gt;
+  ~~~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Beides zusammen lässt sich noch in ein &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;choice&amp;gt;&lt;/code&gt; element verpacken.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Beispiel:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ~~~{.xml}
+  &amp;lt;l&amp;gt;
+      &amp;lt;del rend=&quot;overtyped&quot;&amp;gt;Mein&amp;lt;/del&amp;gt; &amp;lt;add&amp;gt;Frisch&amp;lt;/add&amp;gt;
+      &amp;lt;choice&amp;gt;&amp;lt;del rend=&quot;overstrike&quot; type=&quot;primary&quot;&amp;gt;schwebt&amp;lt;/del&amp;gt; &amp;lt;add&amp;gt;weht&amp;lt;/add&amp;gt;&amp;lt;/choice&amp;gt; der Wind
+  &amp;lt;/l&amp;gt;
+  ~~~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-named-entities-daten-namen-personen-orte&quot;&gt;4. Named entities: Daten, Namen, Personen, Orte&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Datum&lt;/strong&gt; als Datum markieren (egal ob Chronogram)
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;date when=&quot;1807-06-09&quot;&amp;gt;&lt;/code&gt;June 9th&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;/date&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;residence from=&quot;1856-03&quot; to=&quot;1858-04&quot;&amp;gt;&lt;/code&gt;From sometime in March of
+ 1856 to sometime in April of 1858.&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;/residence&amp;gt;&lt;/code&gt;
+ 	+ &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;birth notBefore=&quot;1857-03-01&quot;
+ notAfter=&quot;1857-04-30&quot;&amp;gt;&lt;/code&gt;Some time in
+ March or April of 1857.&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;/birth&amp;gt;&lt;/code&gt;
+ 	+ Siehe: &lt;a href=&quot;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html&quot;&gt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html&lt;/a&gt;
+ 	+ Für nicht-gregorianische Kalender siehe die Dokumentation von &lt;a href=&quot;https://www.github.com/openarabicpe&quot;&gt;OpenArabicPE&lt;/a&gt; bzw. &lt;a href=&quot;https://www.github.com/tillgraller/digital-muqtabas&quot;&gt;Digital Muqtabas&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Personen&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;That silly man
+&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;name role=&quot;politician&quot; type=&quot;person&quot;&amp;gt;&lt;/code&gt;David Paul Brown&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;/name&amp;gt;&lt;/code&gt; has suffered …&lt;/li&gt;
+      &lt;li&gt;Siehe: &lt;a href=&quot;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html&quot;&gt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Orte&lt;/strong&gt; (auch Regionen usw.)
+    &lt;ul&gt;
+      &lt;li&gt;I never fly from &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;name key=&quot;LHR&quot; type=&quot;place&quot;&amp;gt;&lt;/code&gt;Heathrow Airport&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;/name&amp;gt;&lt;/code&gt;
+to&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;name key=&quot;FR&quot; type=&quot;place&quot;&gt;France&lt;/name&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ Siehe: &amp;lt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Namen&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;persName&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;surname&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;forename&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;roleName&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;addName&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;nameLink&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;genName&amp;gt;&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Bsp:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ~~~{.xml}
+  &amp;lt;persName&amp;gt;
+      &amp;lt;forename type=&quot;first&quot;&amp;gt;Franklin&amp;lt;/forename&amp;gt;
+      &amp;lt;forename type=&quot;middle&quot;&amp;gt;Delano&amp;lt;/forename&amp;gt;
+      &amp;lt;surname&amp;gt;Roosevelt&amp;lt;/surname&amp;gt;
+  &amp;lt;/persName&amp;gt;
+  ~~~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Siehe: &lt;a href=&quot;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html&quot;&gt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Gruppen von Leuten&lt;/strong&gt; (z.B. Wenn oft Leute auf dem Markt)
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;orgName&amp;gt;&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;./&quot;&gt;Zurück zur Startseite&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">title: “Dokumentation: Auszeichnungen für TEI Editionen arabischer Manuskripte” author: Julia Dolhoff &amp;amp; Till Grallert date: 2017-11-06 10:22:16 +0200 —</summary></entry></feed>
