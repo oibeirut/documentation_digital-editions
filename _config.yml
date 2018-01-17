@@ -24,11 +24,31 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# author information
+author: Julia Dolhoff
+
 # Build settings
+
+# Outputting
+permalink:  /blog/:year/:month/:day/:title/ # default value: date; built-in values: date, pretty, ordinal, none
+paginate_path: /page:num
+timezone:    null
+quiet:    false
+# defaults: []
+# excerpt_separator: <!--more-->
+
+# Markdown
 markdown: kramdown
 theme: jekyll-theme-leap-day
 plugins:
   - jekyll-feed
+
+# Where things are
+source:      .
+destination: ./_site
+plugins_dir:     ./_plugins
+layouts_dir:     ./_layouts
+data_dir: ./_data
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

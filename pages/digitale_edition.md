@@ -150,11 +150,13 @@ Dabei wird zwischen zwei Entitäten-Gruppen unterschieden:
 
 **Beispielhaftes Schema:**
 
-![Alt-Text](Schema_FRBR_Pierazzo.png)
+<!-- links to images are better added with liquid  -->
+
+![Alt-Text](../../assets/images/Schema_FRBR_Pierazzo.png)
 
 **Multiple Dimensionen:**
 
-![Alt-Text](Dimensionen_FRBR_Pierazzo.png)
+![Alt-Text](../../assets/images/Dimensionen_FRBR_Pierazzo.png)
 
 - Nutzen des FRBR:
 
