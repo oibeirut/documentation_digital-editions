@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
 <!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>Auszeichnung In Tei | Dokumentation &amp; Workflow Digitale Edition OIB</title>
+<title>Dokumentation: Auszeichnungen für TEI Editionen arabischer Manuskripte | Dokumentation &amp; Workflow Digitale Edition OIB</title>
 <meta name="generator" content="Jekyll v3.6.2" />
-<meta property="og:title" content="Auszeichnung In Tei" />
+<meta property="og:title" content="Dokumentation: Auszeichnungen für TEI Editionen arabischer Manuskripte" />
+<meta name="author" content="Julia Dolhoff & Till Grallert" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="title: “Dokumentation: Auszeichnungen für TEI Editionen arabischer Manuskripte” author: Julia Dolhoff &amp; Till Grallert date: 2017-11-06 10:22:16 +0200 —" />
-<meta property="og:description" content="title: “Dokumentation: Auszeichnungen für TEI Editionen arabischer Manuskripte” author: Julia Dolhoff &amp; Till Grallert date: 2017-11-06 10:22:16 +0200 —" />
-<link rel="canonical" href="/documentation_digital-editions/2017/11/06/Auszeichnung-in-TEI.html" />
-<meta property="og:url" content="/documentation_digital-editions/2017/11/06/Auszeichnung-in-TEI.html" />
+<meta name="description" content="Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut" />
+<meta property="og:description" content="Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut" />
+<link rel="canonical" href="http://localhost:4000/documentation_digital-editions/pages/Auszeichnung-in-TEI/" />
+<meta property="og:url" content="http://localhost:4000/documentation_digital-editions/pages/Auszeichnung-in-TEI/" />
 <meta property="og:site_name" content="Dokumentation &amp; Workflow Digitale Edition OIB" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-11-06T00:00:00+02:00" />
+<meta property="article:published_time" content="2017-11-06T10:22:16+02:00" />
 <script type="application/ld+json">
-{"description":"title: “Dokumentation: Auszeichnungen für TEI Editionen arabischer Manuskripte” author: Julia Dolhoff &amp; Till Grallert date: 2017-11-06 10:22:16 +0200 —","@type":"BlogPosting","url":"/documentation_digital-editions/2017/11/06/Auszeichnung-in-TEI.html","headline":"Auszeichnung In Tei","dateModified":"2017-11-06T00:00:00+02:00","datePublished":"2017-11-06T00:00:00+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"/documentation_digital-editions/2017/11/06/Auszeichnung-in-TEI.html"},"@context":"http://schema.org"}</script>
+{"description":"Rechercheergebnisse und Worflow zur Generierung einer Digitalen Edition am Orient Institut-Beirut","author":{"@type":"Person","name":"Julia Dolhoff & Till Grallert"},"@type":"BlogPosting","url":"http://localhost:4000/documentation_digital-editions/pages/Auszeichnung-in-TEI/","headline":"Dokumentation: Auszeichnungen für TEI Editionen arabischer Manuskripte","dateModified":"2017-11-06T10:22:16+02:00","datePublished":"2017-11-06T10:22:16+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/documentation_digital-editions/pages/Auszeichnung-in-TEI/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="stylesheet" href="/documentation_digital-editions/assets/css/style.css?v=">
@@ -48,15 +49,9 @@
         <ul></ul>
       </nav>
       <section>
-        <hr />
-<p>title: “Dokumentation: Auszeichnungen für TEI Editionen arabischer Manuskripte”
-author: Julia Dolhoff &amp; Till Grallert
-date: 2017-11-06 10:22:16 +0200
-—</p>
+        <h1 id="besprechung-benötigter-auszeichnungen-für-die-digitale-edition-der-bi--bts-26102017">Besprechung benötigter Auszeichnungen für die digitale Edition der BI / BTS (26.10.2017)</h1>
 
-<p><a href="./">Zurück zur Startseite</a></p>
-
-<h1 id="besprechung-benötigter-auszeichnungen-für-die-digitale-edition-der-bi--bts-26102017">Besprechung benötigter Auszeichnungen für die digitale Edition der BI / BTS (26.10.2017)</h1>
+<hr />
 
 <h2 id="generelle-anmerkungen">Generelle Anmerkungen:</h2>
 
@@ -68,10 +63,35 @@ date: 2017-11-06 10:22:16 +0200
 <h2 id="1-strukturelemente-block-level-zb-text-paragraph-gedicht">1. Strukturelemente: block-level (z.B. Text, Paragraph, Gedicht)</h2>
 
 <ul>
-  <li>
-    <p><strong>Einheiten im Text</strong> (einzelne Einträge) / <strong>Geschichten</strong></p>
+  <li><strong>Einheiten im Text</strong> (einzelne Einträge) / <strong>Geschichten</strong>
+    <ul>
+      <li>Es bestehen grundsätzlich zwei verschiedene Möglichkeiten Sinneinheiten in einem Dokument zu modellieren: als Abschnitte innerhalb eines Textes oder als Kollation mehrere Texte in einem Dokument. Ersteres sollte einfach als <code class="highlighter-rouge">&lt;div&gt;</code> modelliert werden, letzteres lässt sich entweder mit <code class="highlighter-rouge">&lt;floatingText&gt;</code> oder <code class="highlighter-rouge">TEI/text/group/text</code> modellieren.</li>
+    </ul>
 
-    <p>Beispiel:</p>
+    <p>Beispiel 2:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ~~~{.xml}	
+  &lt;text&gt;
+      &lt;body&gt;
+      &lt;!-- Section on Alexander Pope starts --&gt;
+          &lt;div&gt;
+          &lt;!-- section on something completely different --&gt;
+          &lt;floatingText&gt;
+              &lt;text&gt;
+                  &lt;body&gt;
+                      &lt;div&gt;
+                      &lt;/div&gt;
+                  &lt;/body&gt;
+              &lt;/text&gt;
+          &lt;/floatingText&gt;
+          &lt;!-- Section on Alexander Pope continues --&gt;
+          &lt;/div&gt;
+      &lt;/body&gt;
+  &lt;/text&gt;
+  ~~~
+</code></pre></div>    </div>
+
+    <p>Beispiel 3:</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ~~~{.xml}
   &lt;text&gt;
@@ -118,7 +138,7 @@ date: 2017-11-06 10:22:16 +0200
           &lt;/lg&gt;
       &lt;/body&gt;
   &lt;/text&gt;
-  ~~~		
+  ~~~
 </code></pre></div>    </div>
 
     <ul>
@@ -130,7 +150,7 @@ date: 2017-11-06 10:22:16 +0200
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ~~~{.xml}
   &lt;text&gt;
       &lt;body&gt;
-          &lt;l type = "bayt"&gt;
+          &lt;l type="bayt"&gt;
               &lt;seg&gt;Now that I've wasted&lt;/seg&gt;
               &lt;seg&gt;five years in Manhattan&lt;/seg&gt;
               &lt;seg&gt;life decaying&lt;/seg&gt;
@@ -144,7 +164,7 @@ date: 2017-11-06 10:22:16 +0200
           &lt;/l&gt;
       &lt;/body&gt;
   &lt;/text&gt;
-  ~~~	
+  ~~~
 </code></pre></div>    </div>
 
     <ul>
@@ -237,32 +257,33 @@ date: 2017-11-06 10:22:16 +0200
   </li>
   <li>
     <p><strong>Koranverse</strong></p>
+
+    <ul>
+      <li>Könnten wir als Verse betrachten.</li>
+    </ul>
+
+    <p>Beispiel:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ~~~{.xml}
+  &lt;text&gt;
+      &lt;front&gt;
+          &lt;head&gt;1755&lt;/head&gt;
+      &lt;/front&gt;
+      &lt;body&gt;
+          &lt;l&gt;To make a prairie it takes a clover and one bee,&lt;/l&gt;
+          &lt;l&gt;One clover, and a bee,&lt;/l&gt;
+          &lt;l&gt;And revery.&lt;/l&gt;
+          &lt;l&gt;The revery alone will do,&lt;/l&gt;
+          &lt;l&gt;If bees are few.&lt;/l&gt;
+      &lt;/body&gt;
+  &lt;/text&gt;
+  ~~~
+</code></pre></div>    </div>
+
+    <ul>
+      <li>Siehe: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html</a></li>
+    </ul>
   </li>
-</ul>
-
-<p>Könnten wir als Verse betrachten.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Beispiel:
-
-	~~~{.xml}
-	&lt;text&gt;
-		&lt;front&gt;
-			&lt;head&gt;1755&lt;/head&gt;
-		&lt;/front&gt;
-		&lt;body&gt;
-			&lt;l&gt;To make a prairie it takes a clover and one bee,&lt;/l&gt;
-			&lt;l&gt;One clover, and a bee,&lt;/l&gt;
-			&lt;l&gt;And revery.&lt;/l&gt;
-			&lt;l&gt;The revery alone will do,&lt;/l&gt;
-			&lt;l&gt;If bees are few.&lt;/l&gt;
-		&lt;/body&gt;
-	&lt;/text&gt;
-	~~~
-
-+ Siehe: &lt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html&gt;
-</code></pre></div></div>
-
-<ul>
   <li><strong>Chronogram</strong>
     <ul>
       <li>Wir schlagen <code class="highlighter-rouge">&lt;date&gt;</code> vor. Datum kann dann mit <code class="highlighter-rouge">@when</code> und <code class="highlighter-rouge">@when-custom</code> normalisiert werden.</li>
@@ -498,7 +519,9 @@ to</li>
   </li>
 </ul>
 
-<p><a href="./">Zurück zur Startseite</a></p>
+<hr />
+
+<h1 id="-zurück-zur-startseite">↳ <a href="./">Zurück zur Startseite</a></h1>
 
 
       </section>
